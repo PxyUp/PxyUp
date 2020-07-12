@@ -1,7 +1,7 @@
 ### Hi there 👋
 
 - 👯 I'm currently Golang Team Lead in McMakler
-- 🔭 I'm currently working on [Squzy](squzy)
+- 🔭 I'm currently working on [Squzy](https://github.com/squzy)
 - 🤔 I'm currently 26 y.o
 
 <!--
