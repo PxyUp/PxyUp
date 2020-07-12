@@ -1,5 +1,9 @@
 ### Hi there 👋
 
+- 👯 I'm currently Golang Team Lead in McMakler
+- 🔭 I'm currently working on [Squzy](github.com/squzy)
+- 🤔 I'm currently 26 y.o
+
 <!--
 **PxyUp/PxyUp** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
