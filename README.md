@@ -17,6 +17,7 @@
 - [ENG] [How I Wrote a Javascript Framework](https://levelup.gitconnected.com/how-i-wrote-javascript-framework-59b40dca3366)
 - [ENG] [Virtual scroll table for Angular 7](https://medium.com/@tduble94/virtual-scroll-table-for-angular-7-bb26f8dd48a)
 - [RUS] [Real-Time игры и кроссдоменное соединение](https://habr.com/en/post/276159/)
+- [RUS] [Squzy — бесплатная open-source self-host система мониторинга с инцидентами и уведомлениями](https://habr.com/ru/post/512452/)
 
 <!--
 **PxyUp/PxyUp** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
