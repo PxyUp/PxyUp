@@ -4,7 +4,6 @@
 
 - 👯 I'm currently Golang Tech Lead in McMakler
 - 🔭 I'm currently working on my pet project [Squzy](https://github.com/squzy)
-- 🤔 I'm currently 26 y.o
 - 😄 Love dunks, football, basketball
 - 📫 [Twitter](https://twitter.com/PXYUP) | [Telegram](https://t.me/pxyup)
 
