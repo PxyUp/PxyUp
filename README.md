@@ -21,6 +21,9 @@
 - [RUS] [Real-Time игры и кроссдоменное соединение](https://habr.com/en/post/276159/)
 - [RUS] [Squzy — бесплатная open-source self-host система мониторинга с инцидентами и уведомлениями](https://habr.com/ru/post/512452/)
 
+### My competitions:
+ - [Telegram Instant View Contest (2017) - 2nd place](https://instantview.telegram.org/contest/winners2017)
+
 <!--
 **PxyUp/PxyUp** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
