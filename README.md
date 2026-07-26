@@ -102,7 +102,7 @@ Want your own? Build a config in the [playground](https://pxyup.github.io/fitter
 
 **Act 2 · The run — built on the fly.** This is not a committed image. When you loaded this page, a headless browser opened [`live.html`](https://pxyup.github.io/fitter/live.html) on my GitHub Pages, the **real fitter engine** (Go → WASM) fetched the configs from this repo, scraped all sources and rendered this terminal — and you're looking at the photo of it (rebuilt roughly hourly). Click it to watch it build in front of you:
 
-[![fitter, photographed while running — click to watch it live](https://image.thum.io/get/width/850/crop/500/wait/12/https://pxyup.github.io/fitter/live.html)](https://pxyup.github.io/fitter/live.html)
+[![fitter, photographed while running — click to watch it live](https://image.thum.io/get/width/850/crop/500/wait/12/https://pxyup.github.io/fitter/live.html?v=1)](https://pxyup.github.io/fitter/live.html)
 
 
 **Act 3 · The pipeline.** This diagram is not hand-drawn — it's generated from the config by [`scripts/render_blocks.mjs`](scripts/render_blocks.mjs):
