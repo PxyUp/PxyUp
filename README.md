@@ -89,9 +89,9 @@ Want your own? Build a config in the [playground](https://pxyup.github.io/fitter
 
 ### 📟 fitter, photographed while running — built on the fly for this page view
 
-**This is not a committed image.** When you loaded this page, a headless browser opened [`live.html`](https://pxyup.github.io/fitter/live.html) on my GitHub Pages, the real **[fitter](https://github.com/PxyUp/fitter)** engine (Go → WASM) pulled its configs from this repo, scraped six live sources and rendered the terminal below — you're looking at a photograph of that run, rebuilt roughly every hour. **Click it** to watch the same run happen live in your browser:
+**This is not a committed image.** When you loaded this page, a headless browser opened [`live.html`](https://pxyup.github.io/fitter/live.html) on my GitHub Pages, the real **[fitter](https://github.com/PxyUp/fitter)** engine (Go → WASM) pulled its configs from this repo, scraped six live sources and rendered the terminal below — you're looking at a photograph of that run, re-taken whenever the image caches expire (hours, not seconds). **Click it** to watch the same run happen live in your browser:
 
-<a href="https://pxyup.github.io/fitter/live.html"><img width="850" alt="fitter running — photographed at page load" src="https://image.thum.io/get/viewportWidth/850/width/1700/crop/380/wait/12/https://pxyup.github.io/fitter/live.html?v=2"></a>
+<a href="https://pxyup.github.io/fitter/live.html"><img width="850" alt="fitter running — photographed at page load" src="https://image.thum.io/get/viewportWidth/850/width/1700/crop/380/wait/12/https://pxyup.github.io/fitter/live.html?v=3"></a>
 
 ### My projects:
 
