@@ -1,0 +1,96 @@
+{
+  "item": {
+    "connector_config": {
+      "response_type": "json",
+      "url": "https://api.github.com/users/PxyUp",
+      "server_config": { "method": "GET", "timeout": 30 },
+      "attempts": 2
+    },
+    "model": {
+      "object_config": {
+        "fields": {
+          "me": {
+            "object_config": { "fields": {
+              "followers": { "base_field": { "type": "int", "path": "followers" } },
+              "public_repos": { "base_field": { "type": "int", "path": "public_repos" } },
+              "status": {
+                "base_field": {
+                  "type": "int", "path": "followers",
+                  "generated": { "calculated": { "type": "string", "expression": "fRes >= 100 ? \"certified influencer\" : \"artisanal, small-batch following\"" } }
+                }
+              }
+            } }
+          },
+          "caught_doing": {
+            "base_field": { "type": "object", "generated": { "model": {
+              "type": "object",
+              "connector_config": { "response_type": "json", "url": "https://api.github.com/users/PxyUp/events/public", "server_config": { "method": "GET" }, "null_on_error": true },
+              "model": { "object_config": { "fields": {
+                "action": {
+                  "base_field": {
+                    "type": "string", "path": "0.type",
+                    "generated": { "calculated": { "type": "string", "expression": "fRes == \"PushEvent\" ? \"pushing code\" : (fRes == \"WatchEvent\" ? \"starring repos instead of working\" : (fRes == \"CreateEvent\" ? \"starting yet another project\" : fRes))" } }
+                  }
+                },
+                "repo": { "base_field": { "type": "string", "path": "0.repo.name" } }
+              } } }
+            } } }
+          },
+          "fitter": {
+            "base_field": { "type": "object", "generated": { "model": {
+              "type": "object",
+              "connector_config": { "response_type": "json", "url": "https://api.github.com/repos/PxyUp/fitter", "server_config": { "method": "GET" }, "null_on_error": true },
+              "model": { "object_config": { "fields": {
+                "stars": { "base_field": { "type": "int", "path": "stargazers_count" } },
+                "should_you_star_it": {
+                  "base_field": {
+                    "type": "int", "path": "stargazers_count",
+                    "generated": { "calculated": { "type": "string", "expression": "fRes >= 1000 ? \"obviously\" : \"yes — it clearly needs you\"" } }
+                  }
+                }
+              } } }
+            } } }
+          },
+          "btc": {
+            "base_field": { "type": "object", "generated": { "model": {
+              "type": "object",
+              "connector_config": { "response_type": "json", "url": "https://api.coingecko.com/api/v3/simple/price?ids=bitcoin&vs_currencies=usd&include_24hr_change=true", "server_config": { "method": "GET" }, "null_on_error": true },
+              "model": { "object_config": { "fields": {
+                "price_usd": { "base_field": { "type": "float", "path": "bitcoin.usd" } },
+                "professional_advice": {
+                  "base_field": {
+                    "type": "float", "path": "bitcoin.usd_24h_change",
+                    "generated": { "calculated": { "type": "string", "expression": "fRes > 0 ? \"HODL\" : \"HODL harder\"" } }
+                  }
+                }
+              } } }
+            } } }
+          },
+          "hn_top_story": {
+            "base_field": { "type": "object", "generated": { "model": {
+              "type": "object",
+              "connector_config": { "response_type": "json", "url": "https://hacker-news.firebaseio.com/v0/topstories.json", "server_config": { "method": "GET" }, "null_on_error": true },
+              "model": { "object_config": { "fields": {
+                "reading": { "base_field": { "type": "string", "path": "0", "generated": { "model": {
+                  "type": "string",
+                  "connector_config": { "response_type": "json", "url": "https://hacker-news.firebaseio.com/v0/item/{{{FromExp=fRes}}}.json", "server_config": { "method": "GET" }, "null_on_error": true },
+                  "model": { "base_field": { "type": "string", "path": "title" } }
+                } } } }
+              } } }
+            } } }
+          },
+          "dad_joke": {
+            "base_field": { "type": "object", "generated": { "model": {
+              "type": "object",
+              "connector_config": { "response_type": "json", "url": "https://official-joke-api.appspot.com/random_joke", "server_config": { "method": "GET" }, "null_on_error": true },
+              "model": { "object_config": { "fields": {
+                "setup": { "base_field": { "type": "string", "path": "setup" } },
+                "punchline": { "base_field": { "type": "string", "path": "punchline" } }
+              } } }
+            } } }
+          }
+        }
+      }
+    }
+  }
+}

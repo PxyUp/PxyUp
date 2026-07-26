@@ -1,0 +1,21 @@
+{
+  "item": {
+    "connector_config": {
+      "response_type": "json",
+      "url": "https://api.coingecko.com/api/v3/coins/bitcoin/market_chart?vs_currency=usd&days=7&interval=daily",
+      "server_config": { "method": "GET", "timeout": 30 },
+      "attempts": 2
+    },
+    "model": {
+      "array_config": {
+        "root_path": "prices",
+        "item_config": {
+          "fields": {
+            "ts": { "base_field": { "type": "int", "path": "0" } },
+            "usd": { "base_field": { "type": "float", "path": "1" } }
+          }
+        }
+      }
+    }
+  }
+}
